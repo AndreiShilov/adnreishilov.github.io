@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Integration on Andrei Shilov</title>
+    <link>https://andreishilov.dev/categories/integration/</link>
+    <description>Recent content in Integration on Andrei Shilov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 19 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://andreishilov.dev/categories/integration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AEM and VueJS integration part 2</title>
+      <link>https://andreishilov.dev/blog/vue-integration-part-2/</link>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/vue-integration-part-2/</guid>
+      <description>Previously &amp;hellip; In the previous blog post I have explained a simple (dummy) way of how we can add Vue to an Adobe Experience based project. Now it is time to add a bit more complexity.
+Step 1 - change CDN to NPM  Let&amp;rsquo;s get rid of our hardcoded inclusion of Vue js from CDN. I have prepared a package.json file that will be needed  { &amp;quot;name&amp;quot;: &amp;quot;aem-ktln&amp;quot;, &amp;quot;version&amp;quot;: &amp;quot;1.</description>
+    </item>
+    
+    <item>
+      <title>AEM and VueJS integration part I</title>
+      <link>https://andreishilov.dev/blog/vue-integration-part-1/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/vue-integration-part-1/</guid>
+      <description>Why VueJS I guess that we are all bored with jQuery at the beginning of 2018. There are many modern frameworks we want to use and to try (React, Angular). Nevertheless it is quite complicated to integrate them into AEM and here comes VueJS. It is not monolithic and could be used like a small library to add a bit of action to your AEM based site
+Vue intro  Please take a look at the VueJS intro documentation Awesome blog post which describes all ways how he can define Vue component template blog post  Integration working project could be found here</description>
+    </item>
+    
+  </channel>
+</rss>

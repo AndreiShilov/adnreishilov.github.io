@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Digests on Andrei Shilov</title>
+    <link>https://andreishilov.dev/digest/</link>
+    <description>Recent content in Digests on Andrei Shilov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 09 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://andreishilov.dev/digest/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AEM Digest #0</title>
+      <link>https://andreishilov.dev/digest/0/</link>
+      <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/digest/0/</guid>
+      <description>AEM Digest #0  The Benefits of an Integrated Test Automation Approach Are you ready for the future of customer experience? Meet the challenge with Adobe Experience Cloud AEM Tags Panel for Bridge CC Latest Adobe Experience Manager Leads Innovations in Cloud and Content Intelligence Using Sling Model Exporter Quick start guide for multilingual websites in Adobe Experience Manager Screens How-To Mockup aem dialogs with draw.io and this library Blue-Green Deployment on Adobe Experience Manager AEM + Kotlin examples AEM Groovy console Intellij IDEA plugin [ plugin] Embedding Resources in Proxied Client Libraries  P.</description>
+    </item>
+    
+  </channel>
+</rss>

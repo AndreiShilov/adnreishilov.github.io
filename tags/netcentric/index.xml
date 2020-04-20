@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Netcentric on Andrei Shilov</title>
+    <link>https://andreishilov.dev/tags/netcentric/</link>
+    <description>Recent content in Netcentric on Andrei Shilov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 02 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://andreishilov.dev/tags/netcentric/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Access Control Tool for Adobe Experience Manager by Netcentric</title>
+      <link>https://andreishilov.dev/blog/access-control-tool/</link>
+      <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/access-control-tool/</guid>
+      <description>I would like to share an awesome blog post about Access Control Tool for AEM/CQ with you. The Tool was developed by Netcentric and open sourced to help other AEM developers.
+Blog post &amp;ndash;&amp;gt; AEM: AC Tool or How To Manage Groups &amp;amp; Users
+Quite a comprehensive guide which covers the following topics: * What is it and why do you need this tool * Setup * Migration * Best practices how to organize project structure to most of the AC tool * Configuration basics</description>
+    </item>
+    
+  </channel>
+</rss>

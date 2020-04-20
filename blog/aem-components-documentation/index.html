@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//oss.maxcdn.com">
+
+    <link rel="preload" href="https://andreishilov.dev/js/jq.min.js" as="script">
+    <link rel="preload" href="https://andreishilov.dev/js/main.min.js" as="script"><link rel="preload" href="https://andreishilov.dev/highlight/highlight.pack.js" as="script">
+    <link rel="preload" href="https://andreishilov.dev/highlight/styles/darcula.css" as="style">
+    
+
+    <link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" as="style">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="map[]"/>
+    
+    <meta name="description" content="One way of many others how to document AEM components">
+    
+
+    
+    <meta content='aem, tools, components, documentation, markdown, adobe experience manager' name="keywords">
+    
+
+    <meta property="og:title" content='AEM components documentation (an alternative way)'/>
+
+<meta name="twitter:title" content='AEM components documentation (an alternative way)'>
+
+
+
+<meta property="og:description" content="One way of many others how to document AEM components">
+<meta name="twitter:description" content="One way of many others how to document AEM components">
+
+
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://andreishilov.dev/blog/aem-components-documentation/"/>
+
+
+
+
+    <link rel="icon" type="image/png"  href="https://andreishilov.dev/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://andreishilov.dev/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>AEM components documentation (an alternative way)</title>
+    <meta name="generator" content="Hugo 0.39" />
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old"/>
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <style>
+        h2,h3,hr{margin-top:20px}h2,h3,h4,h5,h6,ol,ul{margin-bottom:10px}p,pre{margin:0 0 10px}body,pre{line-height:1.42857143;color:#333}a,pre code{background-color:transparent}.container,.label{text-align:center}hr,img{border:0}body{margin:0;font-size:14px}footer,nav{display:block}a:active,a:hover{outline:0}strong{font-weight:700}img{vertical-align:middle}svg:not(:root){overflow:hidden}hr{height:0;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}pre{overflow:auto}@media print{img,pre{page-break-inside:avoid}*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;-webkit-box-shadow:none!important;box-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}a[href^="#"]:after{content:""}pre{border:1px solid #999}img{max-width:100%!important}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}.navbar{display:none}.label{border:1px solid #000}}.nav>li,.nav>li>a,pre{display:block}*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}a{color:#337ab7;text-decoration:none}a:focus,a:hover{color:#23527c;text-decoration:underline}a:focus{outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}hr{margin-bottom:20px;border-top:1px solid #eee}[role=button]{cursor:pointer}h2,h3,h4,h5,h6{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h4,h5,h6{margin-top:10px}h2{font-size:30px}h3{font-size:24px}h4{font-size:18px}h5{font-size:14px}h6{font-size:12px}ol,ul{margin-top:0}@media (min-width:768px){.container{width:750px}}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}code,pre{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}pre{padding:9.5px;font-size:13px;word-break:break-all;word-wrap:break-word;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;border-radius:0}.container{margin-right:auto;margin-left:auto;padding-right:15px;padding-left:15px}.container>.navbar-header,.row{margin-right:-15px;margin-left:-15px}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.col-lg-4,.col-lg-8,.col-md-4,.col-md-8,.col-sm-4,.col-sm-8{position:relative;min-height:1px;padding-right:15px;padding-left:15px}@media (min-width:768px){.col-sm-4,.col-sm-8{float:left}.col-sm-8{width:66.66666667%}.col-sm-4{width:33.33333333%}}@media (min-width:992px){.col-md-4,.col-md-8{float:left}.col-md-8{width:66.66666667%}.col-md-4{width:33.33333333%}}@media (min-width:1200px){.col-lg-4,.col-lg-8{float:left}.col-lg-8{width:66.66666667%}.col-lg-4{width:33.33333333%}}.nav>li,.nav>li>a,.navbar{position:relative}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li>a{padding:10px 15px}.nav>li>a:focus,.nav>li>a:hover{text-decoration:none;background-color:#eee}.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover,.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{background-color:transparent}.navbar{min-height:50px;margin-bottom:20px;border:1px solid transparent}.navbar-brand{float:left;height:50px;padding:15px;font-size:18px;line-height:20px}.navbar-brand:focus,.navbar-brand:hover{text-decoration:none}@media (min-width:768px){.navbar{border-radius:4px}.navbar-header{float:left}.container>.navbar-header{margin-right:0;margin-left:0}.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}.navbar-right{float:right!important;margin-right:-15px}}.label{line-height:1;white-space:nowrap;font-weight:700;display:inline;padding:.2em .6em .3em;font-size:75%;color:#fff;vertical-align:baseline;border-radius:.25em}.label:empty{display:none}.label-success{background-color:#5cb85c}.navbar-default,.panel,body{background-color:#fff}.panel{margin-bottom:20px;border:1px solid transparent;border-radius:4px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05)}.panel-body{padding:15px}.panel-default{border-color:#ddd}.container:after,.container:before,.nav:after,.nav:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before,.panel-body:after,.panel-body:before,.row:after,.row:before{display:table;content:" "}.container:after,.nav:after,.navbar-header:after,.navbar:after,.panel-body:after,.row:after{clear:both} .navbar-default .navbar-brand,.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover,.navbar-default .navbar-nav>li>a,.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{color:#6b6b6b}.container,.container img{max-width:800px}body{height:100%;font-family:'Source Sans Pro',sans-serif;border-top:3px solid #27A822}.navbar-default{border-color:#fff}#wrap{padding-bottom:50px;min-height:100%;height:auto;margin:0 auto -65px}.container{width:auto}.blogpost,.panel-body{text-align:left}.container .text-muted{margin:20px 0}.container a{color:#27A822}.container a:hover{color:#267723}.panel-default h5{text-align:left;line-height:30px;font-size:18px}.panel-default h6{font-size:15px}.panel{border-style:none}.blog-post{padding-top:15px}.blog-title{padding-top:2px}.disqus{padding-bottom:15px}.blogpost{line-height:30px;font-size:18px}.footer{text-decoration:none!important}.text-muted{color:#6b6b6b}div.footer{border-bottom:5px solid #27A822}.lightbox-target{position:fixed;top:-100%;width:100%;background:rgba(0,0,0,.7);opacity:0;-webkit-transition:opacity .5s ease-in-out;-moz-transition:opacity .5s ease-in-out;-o-transition:opacity .5s ease-in-out;transition:opacity .5s ease-in-out;overflow:hidden}.lightbox-target img,a.lightbox-close{box-sizing:border-box;position:absolute;right:0}.lightbox-target img{border:3px solid #fff;box-shadow:0 0 8px rgba(0,0,0,.3);margin:auto;top:0;left:0;bottom:0;max-height:0;max-width:0;-webkit-transition:.5s ease-in-out;-moz-transition:.5s ease-in-out;-o-transition:.5s ease-in-out;transition:.5s ease-in-out}a.lightbox-close{display:block;width:50px;height:50px;background:#fff;color:#000;text-decoration:none;top:-80px;-webkit-transition:.5s ease-in-out;-moz-transition:.5s ease-in-out;-o-transition:.5s ease-in-out;transition:.5s ease-in-out}a.lightbox-close:after,a.lightbox-close:before{content:"";display:block;height:30px;width:1px;background:#000;position:absolute;left:26px;top:10px}a.lightbox-close:before{-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg)}a.lightbox-close:after{-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}.lightbox-target:target{opacity:1;top:0;bottom:0}.lightbox-target:target img{max-height:100%;max-width:100%}.lightbox-target:target a.lightbox-close{top:0}
+    </style>
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-75119927-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+</head>
+
+  <body>
+    <div id="wrap">
+
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://andreishilov.dev/"><i class="fa fa-home"></i></a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/blog/">BLOG</a></li>
+        
+        <li><a href="/categories/">CATEGORIES</a></li>
+        
+        <li><a href="/digest/">DIGEST</a></li>
+        
+        <li><a href="/meetups">MEETUPS</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="https://andreishilov.dev/blog/aem-components-documentation/">AEM components documentation (an alternative way)</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+          August 28, 2018
+            &nbsp;&nbsp;
+            
+            <span class="label label-success">aem</span>
+            
+            <span class="label label-success">tools</span>
+            
+            <span class="label label-success">components</span>
+            
+            <span class="label label-success">documentation</span>
+            
+            <span class="label label-success">markdown</span>
+            
+          </h4>
+        </div>
+        <hr>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
+
+<h2 id="intro">Intro</h2>
+
+<p>One of the core things of any product is proper documentation. Documentation simplifies quite a few things such
+as the onboarding of a new member, saves your time in case someone wants to understand functionality you have implemented
+and secures project knowledge if someone leaves your company, etc. When working with Adobe Experience Manager, components&rsquo; documentation
+is a crucial thing, because it is very important for Content Managers to have complete and up-to-date components&rsquo; documentation.</p>
+
+<p>You can say that there is a specific user story for a specific component, therefore we may assume that we already have certain
+documentation, <strong>BUT</strong> we have several issues here:</p>
+
+<ul>
+<li>This documentation is not maintained by the developer, therefore some important points might be missed</li>
+<li>This documentation might be maintained on several pages and different systems:
+
+<ul>
+<li>Jira</li>
+<li>Confluence</li>
+<li>&hellip;.
+<br /></li>
+</ul></li>
+</ul>
+
+<p>Conclusion: sometimes it is really hard to find the required information.
+* If you do not want your developers to maintain such documentation in the code base, they might be not very happy about it.</p>
+
+<p>Nevertheless for some people the problem described above is not a problem and a further attempt to solve the problem
+might be overengineered, so let&rsquo;s now move to the next section.</p>
+
+<p><em>Note:</em> In case it is not a real problem for you, I honestly hope that your developers use the <code>helpPath</code> attribute :)</p>
+
+<h2 id="idea">Idea</h2>
+
+<p>From the developer&rsquo;s perspective the idea is easy peasy lemon squeezy. We have an AEM instance, so why do we need to store
+documentation somewhere else if we can store it as content in AEM?</p>
+
+<p>For me it sounds really cool. But now you might be asking yourself the following question: <code>Hmm, how should we store documentation in AEM?</code></p>
+
+<h3 id="part-1">Part 1</h3>
+
+<p>The first step is to have a description of a component&rsquo;s features/settings. This can be easily done with a <code>README.MD</code> file for every component,
+which can be placed in the component&rsquo;s folder and carefully maintained by the developers.</p>
+
+<p>Pros:
+* Maintained by developers (who actually implement this component or modify it)
+* The file will be stored under version control system, so it is easy to track changes
+* Easy to check during the code review that basic documentation was updated
+* Markdown is supported by all version control system providers, therefore it will also be rendered in the repository web view
+* Markdown is widely used, so it can be exported to other systems like Confluence</p>
+
+<p>Cons:
+* Not all developers are happy to write documentation
+* Only developers can modify their documentation - this might be a problem if you have new well-written documentation</p>
+
+<h4 id="implementation">Implementation</h4>
+
+<p>We will need a Servlet to render a <code>README.MD</code> file:</p>
+
+<pre><code class="language-java">@Component(service = Servlet.class,
+        property = {
+                Constants.SERVICE_DESCRIPTION + &quot;=Markdown documentation servlet&quot;,
+                &quot;sling.servlet.methods=&quot; + HttpConstants.METHOD_GET,
+                &quot;sling.servlet.resourceTypes=&quot; + &quot;sling/servlet/default&quot;,
+                &quot;sling.servlet.selectors=markdowndoc&quot;,
+                &quot;sling.servlet.extensions=html&quot;
+        })
+public class MarkdownDocServlet extends SlingSafeMethodsServlet {
+
+    private static final String README_MD = &quot;README.md&quot;;
+
+    private static final RequestDispatcherOptions OPTIONS = new RequestDispatcherOptions();
+    private static final String DOCUMENTATION_PAGE_RESOURCE_TYPE = &quot;aem-documentation-extension/components/page/document-page&quot;;
+
+    {
+        OPTIONS.setReplaceSelectors(StringUtils.EMPTY); // to remove 'markdowndoc' selector
+        OPTIONS.setForceResourceType(DOCUMENTATION_PAGE_RESOURCE_TYPE);
+    }
+
+    @Override
+    protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
+
+        final Resource resource = request.getResource();
+
+        final Resource child = resource.getChild(README_MD);
+
+        if (child != null) {
+
+            final RequestDispatcher requestDispatcher = request.getRequestDispatcher(resource, OPTIONS);
+
+            if (requestDispatcher != null) {
+                response.setContentType(&quot;text/html; charset=UTF-8&quot;);
+                requestDispatcher.forward(request, response);
+            }
+        } else {
+            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+        }
+    }
+}
+</code></pre>
+
+<p>Simple servlet to dispatch rendering to the special component &ndash;&gt; <code>aem-documentation-extension/components/page/document-page</code>.</p>
+
+<p>View component:</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head data-sly-use.clientlib=&quot;${'/libs/granite/sightly/templates/clientlib.html'}&quot;&gt;
+    &lt;link data-sly-call=&quot;${clientLib.css @ categories='coralui3,granite.ui.coral.foundation,granite.ui.shell,aem-documentation-extension'}&quot;
+          data-sly-unwrap/&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Components' Documentation page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body class=&quot;coral--light&quot;&gt;
+
+&lt;div class=&quot;coral-Shell&quot;&gt;
+    &lt;div class=&quot;foundation-content coral-Shell-content&quot; role=&quot;main&quot;
+         data-sly-use.model=&quot;com.github.andreishilov.ade.core.models.DocumentPageModel&quot;&gt;
+        &lt;div class=&quot;foundation-content-current foundation-layout-util-maximized-alt&quot;&gt;
+            &lt;div class=&quot;foundation-layout-panel&quot;&gt;
+                &lt;div class=&quot;foundation-layout-panel-header&quot;&gt;
+                    &lt;div class=&quot;granite-actionbar&quot;&gt;
+                        &lt;div class=&quot;granite-actionbar-centerwrapper&quot;&gt;
+                            &lt;div class=&quot;granite-actionbar-center&quot;&gt;
+                                &lt;span class=&quot;granite-title&quot; role=&quot;heading&quot;
+                                      aria-level=&quot;1&quot;&gt;${model.title @  i18n, locale=request.locale}&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;documentation-page&quot;&gt;
+                    &lt;div class=&quot;documentation-page__content&quot;&gt;
+                        ${model.htmlMarkup @ context='html'}
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Sling Model:</p>
+
+<pre><code class="language-java">@Model(adaptables = {Resource.class})
+public class DocumentPageModel {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(DocumentPageModel.class);
+
+    @Self
+    private Resource resource;
+
+    @SlingObject
+    private ResourceResolver resourceResolver;
+
+    @OSGiService
+    private ReadmeService readmeService;
+
+    private String htmlMarkup;
+
+    private String title;
+
+    @PostConstruct
+    public void init() {
+        title = resource.getValueMap().get(JcrConstants.JCR_TITLE, String.class);
+        htmlMarkup = readmeService.getReadmeContent(resource.getPath(), resourceResolver);
+    }
+
+    public String getHtmlMarkup() {
+        return htmlMarkup;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}
+</code></pre>
+
+<p>Service:</p>
+
+<pre><code class="language-java">@Component(service = ReadmeService.class)
+public class ReadmeServiceImpl implements ReadmeService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ReadmeServiceImpl.class);
+
+    private static final String README_MD = &quot;README.md&quot;;
+
+    @Override
+    public String getReadmeContent(final String componentPath, final ResourceResolver resourceResolver) {
+
+        final Resource componentResource = resourceResolver.getResource(componentPath);
+
+
+        final Resource readMeResource = componentResource.getChild(README_MD);
+
+        if (readMeResource == null) {
+            LOGGER.error(&quot;Readme.md resource is null, should be not null, checked at MarkdownDocServlet.java. Resource path = [{}]&quot;,
+                    componentResource.getPath());
+            return null;
+        }
+
+        try {
+            final Node readMeNode = readMeResource.adaptTo(Node.class);
+
+            if (readMeNode == null) {
+                LOGGER.error(&quot;Could not adapt resource to Node.class. Resource path = [{}]&quot;, readMeResource.getPath());
+                return null;
+            }
+
+            final Node readMeJcrContentNode = readMeNode.getNode(JCR_CONTENT);
+
+            final InputStream inputStream = readMeJcrContentNode.getProperty(JCR_DATA).getBinary().getStream();
+
+            return MarkDownUtils.markdownToHtml(IOUtils.toString(inputStream, &quot;UTF-8&quot;));
+
+        } catch (RepositoryException | IOException e) {
+            LOGGER.error(e.getMessage(), e);
+            return e.getMessage() + &quot;. Please checkout logs&quot;;
+        }
+    }
+}
+</code></pre>
+
+<p>Good, now let&rsquo;s create a component and a <code>README.MD</code> file for it.</p>
+
+<p><a href="https://github.com/AndreiShilov/aem-documentation-extension/blob/master/ui.apps/src/main/content/jcr_root/apps/aem-documentation-extension/components/par/markdown/README.md">File</a></p>
+
+<p>Add a proper <code>helpPath</code> attribute:</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;jcr:root xmlns:sling=&quot;http://sling.apache.org/jcr/sling/1.0&quot; xmlns:cq=&quot;http://www.day.com/jcr/cq/1.0&quot;
+          xmlns:jcr=&quot;http://www.jcp.org/jcr/1.0&quot; xmlns:nt=&quot;http://www.jcp.org/jcr/nt/1.0&quot;
+          xmlns:granite=&quot;http://www.adobe.com/jcr/granite/1.0&quot;
+          jcr:primaryType=&quot;nt:unstructured&quot;
+          jcr:title=&quot;Markdown&quot;
+          helpPath=&quot;/apps/aem-documentation-extension/components/par/markdown.markdowndoc.html&quot;
+          sling:resourceType=&quot;cq/gui/components/authoring/dialog&quot;&gt;
+    &lt;content&gt;
+    &lt;/content&gt;
+&lt;/jcr:root&gt;
+</code></pre>
+
+<p>The full component can be found <a href="https://github.com/AndreiShilov/aem-documentation-extension/tree/master/ui.apps/src/main/content/jcr_root/apps/aem-documentation-extension/components/par/markdown">here</a></p>
+
+<p>Awesome! It&rsquo;s time for a demo!</p>
+
+<h5 id="dialog">Dialog</h5>
+
+<figure class="flex-content">
+    <a class="lightbox--enabled" href="#light-box">
+<picture>
+<source
+media="(max-width: 767px)"
+sizes="(max-width: 1534px) 100vw, 1534px"
+srcset="
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_1_1,c_fill,g_auto__c_scale,w_200.jpg 200w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_1_1,c_fill,g_auto__c_scale,w_501.jpg 501w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_1_1,c_fill,g_auto__c_scale,w_707.jpg 707w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_1_1,c_fill,g_auto__c_scale,w_942.jpg 942w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_1_1,c_fill,g_auto__c_scale,w_1114.jpg 1114w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_1_1,c_fill,g_auto__c_scale,w_1311.jpg 1311w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_1_1,c_fill,g_auto__c_scale,w_1481.jpg 1481w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_1_1,c_fill,g_auto__c_scale,w_1534.jpg 1534w">
+<source
+media="(min-width: 768px) and (max-width: 991px)"
+sizes="(max-width: 1983px) 70vw, 1388px"
+srcset="
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_4_3,c_fill,g_auto__c_scale,w_538.jpg 538w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_4_3,c_fill,g_auto__c_scale,w_805.jpg 805w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_4_3,c_fill,g_auto__c_scale,w_1016.jpg 1016w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_4_3,c_fill,g_auto__c_scale,w_1223.jpg 1223w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_4_3,c_fill,g_auto__c_scale,w_1388.jpg 1388w">
+<source
+media="(min-width: 992px) and (max-width: 1199px)"
+sizes="(max-width: 2400px) 60vw, 1440px"
+srcset="
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_16_9,c_fill,g_auto__c_scale,w_596.jpg 596w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_16_9,c_fill,g_auto__c_scale,w_884.jpg 884w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_16_9,c_fill,g_auto__c_scale,w_1117.jpg 1117w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_16_9,c_fill,g_auto__c_scale,w_1403.jpg 1403w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_ar_16_9,c_fill,g_auto__c_scale,w_1440.jpg 1440w">
+<img
+sizes="(max-width: 4105px) 40vw, 1642px"
+srcset="
+/img/aem-components-documentation/markdown-dialog_b3ljxx_c_scale,w_480.jpg 480w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_c_scale,w_721.jpg 721w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_c_scale,w_933.jpg 933w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_c_scale,w_1121.jpg 1121w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_c_scale,w_1289.jpg 1289w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_c_scale,w_1453.jpg 1453w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_c_scale,w_1604.jpg 1604w,
+/img/aem-components-documentation/markdown-dialog_b3ljxx_c_scale,w_1642.jpg 1642w"
+src="/img/aem-components-documentation/markdown-dialog_b3ljxx_c_scale,w_1642.jpg"
+alt="">
+</picture>
+ </a>
+</figure>
+
+<h5 id="documentation-page">Documentation page</h5>
+
+<figure class="flex-content">
+    <a class="lightbox--enabled" href="#light-box">
+<picture>
+<source
+media="(max-width: 767px)"
+sizes="(max-width: 534px) 100vw, 534px"
+srcset="
+/img/aem-components-documentation/markdown-helpPage_nmohi4_ar_1_1,c_fill,g_auto__c_scale,w_200.jpg 200w,
+/img/aem-components-documentation/markdown-helpPage_nmohi4_ar_1_1,c_fill,g_auto__c_scale,w_368.jpg 368w,
+/img/aem-components-documentation/markdown-helpPage_nmohi4_ar_1_1,c_fill,g_auto__c_scale,w_517.jpg 517w,
+/img/aem-components-documentation/markdown-helpPage_nmohi4_ar_1_1,c_fill,g_auto__c_scale,w_534.jpg 534w">
+<source
+media="(min-width: 768px) and (max-width: 991px)"
+sizes="(max-width: 991px) 70vw, 694px"
+srcset="
+/img/aem-components-documentation/markdown-helpPage_nmohi4_ar_4_3,c_fill,g_auto__c_scale,w_538.jpg 538w,
+/img/aem-components-documentation/markdown-helpPage_nmohi4_ar_4_3,c_fill,g_auto__c_scale,w_694.jpg 694w">
+<source
+media="(min-width: 992px) and (max-width: 1199px)"
+sizes="(max-width: 1200px) 60vw, 720px"
+srcset="
+/img/aem-components-documentation/markdown-helpPage_nmohi4_ar_16_9,c_fill,g_auto__c_scale,w_596.jpg 596w,
+/img/aem-components-documentation/markdown-helpPage_nmohi4_ar_16_9,c_fill,g_auto__c_scale,w_720.jpg 720w">
+<img
+sizes="(max-width: 3500px) 40vw, 1400px"
+srcset="
+/img/aem-components-documentation/markdown-helpPage_nmohi4_c_scale,w_480.jpg 480w,
+/img/aem-components-documentation/markdown-helpPage_nmohi4_c_scale,w_862.jpg 862w,
+/img/aem-components-documentation/markdown-helpPage_nmohi4_c_scale,w_1218.jpg 1218w,
+/img/aem-components-documentation/markdown-helpPage_nmohi4_c_scale,w_1400.jpg 1400w"
+src="/img/aem-components-documentation/markdown-helpPage_nmohi4_c_scale,w_1400.jpg"
+alt="">
+</picture>
+ </a>
+</figure>
+
+<h3 id="part-2">Part 2</h3>
+
+<p>Besides the component&rsquo;s &lsquo;How-To&rsquo; described in Part 1 it would be really useful to have a demo of this component with all available configurations.</p>
+
+<p>I personally do not want to discuss a tree structure or where to place it, ie. I can only suggest what I would prefer. You then can choose any structure
+you want or the structure, that better suits your implementation.</p>
+
+<figure class="flex-content">
+    <a class="lightbox--enabled" href="#light-box">
+<picture>
+<source
+media="(max-width: 767px)"
+sizes="(max-width: 767px) 100vw, 767px"
+srcset="
+/img/aem-components-documentation/demo-components-structure_mllipq_ar_1_1,c_fill,g_auto__c_scale,w_200.jpg 200w,
+/img/aem-components-documentation/demo-components-structure_mllipq_ar_1_1,c_fill,g_auto__c_scale,w_466.jpg 466w,
+/img/aem-components-documentation/demo-components-structure_mllipq_ar_1_1,c_fill,g_auto__c_scale,w_693.jpg 693w,
+/img/aem-components-documentation/demo-components-structure_mllipq_ar_1_1,c_fill,g_auto__c_scale,w_767.jpg 767w">
+<source
+media="(min-width: 768px) and (max-width: 991px)"
+sizes="(max-width: 991px) 70vw, 694px"
+srcset="
+/img/aem-components-documentation/demo-components-structure_mllipq_ar_4_3,c_fill,g_auto__c_scale,w_538.jpg 538w,
+/img/aem-components-documentation/demo-components-structure_mllipq_ar_4_3,c_fill,g_auto__c_scale,w_694.jpg 694w">
+<source
+media="(min-width: 992px) and (max-width: 1199px)"
+sizes="(max-width: 1200px) 60vw, 720px"
+srcset="
+/img/aem-components-documentation/demo-components-structure_mllipq_ar_16_9,c_fill,g_auto__c_scale,w_596.jpg 596w,
+/img/aem-components-documentation/demo-components-structure_mllipq_ar_16_9,c_fill,g_auto__c_scale,w_720.jpg 720w">
+<img
+sizes="(max-width: 3500px) 40vw, 1400px"
+srcset="
+/img/aem-components-documentation/demo-components-structure_mllipq_c_scale,w_480.jpg 480w,
+/img/aem-components-documentation/demo-components-structure_mllipq_c_scale,w_843.jpg 843w,
+/img/aem-components-documentation/demo-components-structure_mllipq_c_scale,w_1115.jpg 1115w,
+/img/aem-components-documentation/demo-components-structure_mllipq_c_scale,w_1387.jpg 1387w,
+/img/aem-components-documentation/demo-components-structure_mllipq_c_scale,w_1400.jpg 1400w"
+src="/img/aem-components-documentation/demo-components-structure_mllipq_c_scale,w_1400.jpg"
+alt="">
+</picture>
+ </a>
+</figure>
+
+<p>The main idea is that we can finally use <code>Content fragments</code> !!!!</p>
+
+<h4 id="implementation-1">Implementation</h4>
+
+<p>Content fragments&rsquo; functionality also supports markdown syntax, therefore we can write notes in the same way we write the
+component&rsquo;s <code>README.MD</code> file. Besides that a <code>Content fragment</code> can have variations and in our case it is very convenient,
+because we can create one <code>Content fragment</code> per component and as many variations as our component has possible configurations.</p>
+
+<p><strong>Structure</strong></p>
+
+<figure class="flex-content">
+    <a class="lightbox--enabled" href="#light-box">
+<picture>
+<source
+media="(max-width: 767px)"
+sizes="(max-width: 767px) 100vw, 767px"
+srcset="
+/img/aem-components-documentation/content-fragments-structure_skziab_ar_1_1,c_fill,g_auto__c_scale,w_200.jpg 200w,
+/img/aem-components-documentation/content-fragments-structure_skziab_ar_1_1,c_fill,g_auto__c_scale,w_547.jpg 547w,
+/img/aem-components-documentation/content-fragments-structure_skziab_ar_1_1,c_fill,g_auto__c_scale,w_767.jpg 767w">
+<source
+media="(min-width: 768px) and (max-width: 991px)"
+sizes="(max-width: 991px) 70vw, 694px"
+srcset="
+/img/aem-components-documentation/content-fragments-structure_skziab_ar_4_3,c_fill,g_auto__c_scale,w_538.jpg 538w,
+/img/aem-components-documentation/content-fragments-structure_skziab_ar_4_3,c_fill,g_auto__c_scale,w_694.jpg 694w">
+<source
+media="(min-width: 992px) and (max-width: 1199px)"
+sizes="(max-width: 1200px) 60vw, 720px"
+srcset="
+/img/aem-components-documentation/content-fragments-structure_skziab_ar_16_9,c_fill,g_auto__c_scale,w_596.jpg 596w,
+/img/aem-components-documentation/content-fragments-structure_skziab_ar_16_9,c_fill,g_auto__c_scale,w_720.jpg 720w">
+<img
+sizes="(max-width: 3500px) 40vw, 1400px"
+srcset="
+/img/aem-components-documentation/content-fragments-structure_skziab_c_scale,w_480.jpg 480w,
+/img/aem-components-documentation/content-fragments-structure_skziab_c_scale,w_882.jpg 882w,
+/img/aem-components-documentation/content-fragments-structure_skziab_c_scale,w_1220.jpg 1220w,
+/img/aem-components-documentation/content-fragments-structure_skziab_c_scale,w_1400.jpg 1400w"
+src="/img/aem-components-documentation/content-fragments-structure_skziab_c_scale,w_1400.jpg"
+alt="">
+</picture>
+ </a>
+</figure>
+
+<p><strong>Variations</strong></p>
+
+<figure class="flex-content">
+    <a class="lightbox--enabled" href="#light-box">
+<picture>
+<source
+media="(max-width: 767px)"
+sizes="(max-width: 767px) 100vw, 767px"
+srcset="
+/img/aem-components-documentation/variations_dxplag_ar_1_1,c_fill,g_auto__c_scale,w_200.jpg 200w,
+/img/aem-components-documentation/variations_dxplag_ar_1_1,c_fill,g_auto__c_scale,w_509.jpg 509w,
+/img/aem-components-documentation/variations_dxplag_ar_1_1,c_fill,g_auto__c_scale,w_767.jpg 767w">
+<source
+media="(min-width: 768px) and (max-width: 991px)"
+sizes="(max-width: 991px) 70vw, 694px"
+srcset="
+/img/aem-components-documentation/variations_dxplag_ar_4_3,c_fill,g_auto__c_scale,w_538.jpg 538w,
+/img/aem-components-documentation/variations_dxplag_ar_4_3,c_fill,g_auto__c_scale,w_694.jpg 694w">
+<source
+media="(min-width: 992px) and (max-width: 1199px)"
+sizes="(max-width: 1200px) 60vw, 720px"
+srcset="
+/img/aem-components-documentation/variations_dxplag_ar_16_9,c_fill,g_auto__c_scale,w_596.jpg 596w,
+/img/aem-components-documentation/variations_dxplag_ar_16_9,c_fill,g_auto__c_scale,w_720.jpg 720w">
+<img
+sizes="(max-width: 3500px) 40vw, 1400px"
+srcset="
+/img/aem-components-documentation/variations_dxplag_c_scale,w_480.jpg 480w,
+/img/aem-components-documentation/variations_dxplag_c_scale,w_1010.jpg 1010w,
+/img/aem-components-documentation/variations_dxplag_c_scale,w_1400.jpg 1400w"
+src="/img/aem-components-documentation/variations_dxplag_c_scale,w_1400.jpg"
+alt="">
+</picture>
+ </a>
+</figure>
+
+<p>Last but not least, we need a component to select a content fragment and an applicable variation.</p>
+
+<p>The code can be found <a href="https://github.com/AndreiShilov/aem-documentation-extension/tree/master/ui.apps/src/main/content/jcr_root/apps/aem-documentation-extension/components/par/markdown">here</a></p>
+
+<p><strong>Configured dialog</strong></p>
+
+<figure class="flex-content">
+    <a class="lightbox--enabled" href="#light-box">
+<picture>
+<source
+media="(max-width: 767px)"
+sizes="(max-width: 767px) 100vw, 767px"
+srcset="
+/img/aem-components-documentation/configured-dialog_zgbj2m_ar_1_1,c_fill,g_auto__c_scale,w_200.jpg 200w,
+/img/aem-components-documentation/configured-dialog_zgbj2m_ar_1_1,c_fill,g_auto__c_scale,w_580.jpg 580w,
+/img/aem-components-documentation/configured-dialog_zgbj2m_ar_1_1,c_fill,g_auto__c_scale,w_767.jpg 767w">
+<source
+media="(min-width: 768px) and (max-width: 991px)"
+sizes="(max-width: 991px) 70vw, 694px"
+srcset="
+/img/aem-components-documentation/configured-dialog_zgbj2m_ar_4_3,c_fill,g_auto__c_scale,w_538.jpg 538w,
+/img/aem-components-documentation/configured-dialog_zgbj2m_ar_4_3,c_fill,g_auto__c_scale,w_694.jpg 694w">
+<source
+media="(min-width: 992px) and (max-width: 1199px)"
+sizes="(max-width: 1200px) 60vw, 720px"
+srcset="
+/img/aem-components-documentation/configured-dialog_zgbj2m_ar_16_9,c_fill,g_auto__c_scale,w_596.jpg 596w,
+/img/aem-components-documentation/configured-dialog_zgbj2m_ar_16_9,c_fill,g_auto__c_scale,w_720.jpg 720w">
+<img
+sizes="(max-width: 2805px) 40vw, 1122px"
+srcset="
+/img/aem-components-documentation/configured-dialog_zgbj2m_c_scale,w_480.jpg 480w,
+/img/aem-components-documentation/configured-dialog_zgbj2m_c_scale,w_815.jpg 815w,
+/img/aem-components-documentation/configured-dialog_zgbj2m_c_scale,w_1095.jpg 1095w,
+/img/aem-components-documentation/configured-dialog_zgbj2m_c_scale,w_1122.jpg 1122w"
+src="/img/aem-components-documentation/configured-dialog_zgbj2m_c_scale,w_1122.jpg"
+alt="">
+</picture>
+
+ </a>
+</figure>
+
+<p><strong>Final rendering</strong></p>
+
+<figure class="flex-content">
+    <a class="lightbox--enabled" href="#light-box">
+<picture>
+<source
+media="(max-width: 767px)"
+sizes="(max-width: 767px) 100vw, 767px"
+srcset="
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_1_1,c_fill,g_auto__c_scale,w_200.jpg 200w,
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_1_1,c_fill,g_auto__c_scale,w_308.jpg 308w,
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_1_1,c_fill,g_auto__c_scale,w_402.jpg 402w,
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_1_1,c_fill,g_auto__c_scale,w_482.jpg 482w,
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_1_1,c_fill,g_auto__c_scale,w_552.jpg 552w,
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_1_1,c_fill,g_auto__c_scale,w_634.jpg 634w,
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_1_1,c_fill,g_auto__c_scale,w_708.jpg 708w,
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_1_1,c_fill,g_auto__c_scale,w_754.jpg 754w,
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_1_1,c_fill,g_auto__c_scale,w_767.jpg 767w">
+<source
+media="(min-width: 768px) and (max-width: 991px)"
+sizes="(max-width: 991px) 70vw, 694px"
+srcset="
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_4_3,c_fill,g_auto__c_scale,w_538.jpg 538w,
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_4_3,c_fill,g_auto__c_scale,w_629.jpg 629w,
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_4_3,c_fill,g_auto__c_scale,w_694.jpg 694w">
+<source
+media="(min-width: 992px) and (max-width: 1199px)"
+sizes="(max-width: 1200px) 60vw, 720px"
+srcset="
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_16_9,c_fill,g_auto__c_scale,w_596.jpg 596w,
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_16_9,c_fill,g_auto__c_scale,w_693.jpg 693w,
+/img/aem-components-documentation/final-rendering_ro1vlm_ar_16_9,c_fill,g_auto__c_scale,w_720.jpg 720w">
+<img
+sizes="(max-width: 3500px) 40vw, 1400px"
+srcset="
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_480.jpg 480w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_562.jpg 562w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_635.jpg 635w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_711.jpg 711w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_777.jpg 777w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_846.jpg 846w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_914.jpg 914w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_973.jpg 973w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_1030.jpg 1030w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_1106.jpg 1106w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_1165.jpg 1165w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_1230.jpg 1230w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_1282.jpg 1282w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_1339.jpg 1339w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_1386.jpg 1386w,
+/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_1400.jpg 1400w"
+src="/img/aem-components-documentation/final-rendering_ro1vlm_c_scale,w_1400.jpg"
+alt="">
+</picture>
+ </a>
+</figure>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<p>All of the above is just an example of how you can extend components&rsquo; documentation.</p>
+
+<p>Generally it all depends on your particular case and you should be cautious. From my point of view this approach
+only makes sense if you have relatively many complex components and the content manager teams change frequently.</p>
+
+<p>If you have simple components and a team of 2-5 content managers, there is no point to add additional complexity.</p>
+
+              <hr>
+              <div>
+                <div class="sharethis-inline-reaction-buttons"></div>
+
+              </div>
+              <hr>
+              <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+                  <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <h6 style="text-align: right">
+                        September 26, 2019
+                      </h6>
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                      <h6 style="text-align: left">
+                        <strong><a href="/blog/tabs-show-hide/">Show Hide Tabs</a></strong>
+                      </h6>
+                    </div>
+                  </div>
+                
+                  <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <h6 style="text-align: right">
+                        August 21, 2019
+                      </h6>
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                      <h6 style="text-align: left">
+                        <strong><a href="/blog/interaction-with-components-in-touchui-edit-mode/">How to interact with components in the TouchUI edit mode</a></strong>
+                      </h6>
+                    </div>
+                  </div>
+                
+                  <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <h6 style="text-align: right">
+                        August 21, 2019
+                      </h6>
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                      <h6 style="text-align: left">
+                        <strong><a href="/blog/custom-editable-toolbar-action/">Custom Editable Toolbar Action</a></strong>
+                      </h6>
+                    </div>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = 'asblog-1';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="lightbox-target" id="light-box">
+    <img src="" alt="lightbox container"/>
+    <a class="lightbox-close" href="#_"></a>
+</div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+<link rel="stylesheet" href="https://andreishilov.dev/bootstrap/css/bs3.3.7.min.css" >
+<link rel="stylesheet" type="text/css" href="https://andreishilov.dev/css/main.min.css" />
+
+
+<script src="https://andreishilov.dev/js/jq.min.js"></script>
+<script src="https://andreishilov.dev/js/main.min.js"></script>
+
+<script src="https://andreishilov.dev/js/ie10-viewport-bug-workaround.min.js"></script><!-- Syntax highlighting -->
+<link rel="stylesheet" href="https://andreishilov.dev/highlight/styles/darcula.css">
+<script src="https://andreishilov.dev/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type='text/javascript'
+        src='//platform-api.sharethis.com/js/sharethis.js#property=5adc517022309d0013d4f0f1&product=inline-share-buttons'
+        async='async'></script>
+<link rel="stylesheet" type="text/css"
+      href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js" async="async"></script>
+<script>
+    window.addEventListener("load", function () {
+        window.cookieconsent.initialise({
+                                            "palette": {
+                                                "popup": {
+                                                    "background": "#eb6c44",
+                                                    "text": "#ffffff"
+                                                },
+                                                "button": {
+                                                    "background": "#f5d948"
+                                                }
+                                            }
+                                        })
+    });
+</script>
+
+    
+  </body>
+</html>

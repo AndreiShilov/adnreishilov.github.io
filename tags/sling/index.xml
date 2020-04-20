@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sling on Andrei Shilov</title>
+    <link>https://andreishilov.dev/tags/sling/</link>
+    <description>Recent content in Sling on Andrei Shilov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 24 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://andreishilov.dev/tags/sling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ResourceChange in 6.3</title>
+      <link>https://andreishilov.dev/blog/resource-change-aem-6_3/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/resource-change-aem-6_3/</guid>
+      <description>API &amp;lsquo;BREAKING&amp;rsquo; changes I&amp;rsquo;d like to share some interesting thing I have faced when we migrated form AEM 6.2 to 6.3.
+There is several options how to observe changes in AEM:
+ EventListener - low lvl EventHandler - high lvl ResourceChangeListener - high lvl  I have used ResourceChangeListener because it was quite easy to get changed/added/removed properties from ResourceChange,BUT in AEM 6.2 they were
+/** * Optional information about changed properties.</description>
+    </item>
+    
+    <item>
+      <title>Sling health check hints</title>
+      <link>https://andreishilov.dev/blog/sling-healthcheck-hint/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/sling-healthcheck-hint/</guid>
+      <description>How improve your health check with info and hint messages May be you are already familiar with AEM operations dashboard if not check this.
+On this dashboard you can find a lot of useful tools but now we are interested in &amp;ldquo;HealthCheck Reports&amp;rdquo;
+    You can overview several of them and notice that some of them has hints and info messages at the top.
+    You can easy find how to create a healthcheck over the internet, but how to add &amp;lsquo;hints&amp;rsquo; or &amp;lsquo;info&amp;rsquo; messages not.</description>
+    </item>
+    
+  </channel>
+</rss>

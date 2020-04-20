@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>6.3 on Andrei Shilov</title>
+    <link>https://andreishilov.dev/tags/6.3/</link>
+    <description>Recent content in 6.3 on Andrei Shilov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 09 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://andreishilov.dev/tags/6.3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Proxing clientlibs in AEM</title>
+      <link>https://andreishilov.dev/blog/proxing-clientlib/</link>
+      <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/proxing-clientlib/</guid>
+      <description>In AEM we know that we should store final clientlib under /etc/designs/site/clientlibs because anyone has access to this node. So you are not worried when you add this clientlib on your page. Nevertheless sometimes we can see that someone has created clientlib under /apps folder and all works correctly on author instance, but when the code is deployed on publish instance nothing works as we expected.
+Since AEM 6.3 you can proxy your clientclibs under /apps folder via special servlet.</description>
+    </item>
+    
+    <item>
+      <title>ResourceChange in 6.3</title>
+      <link>https://andreishilov.dev/blog/resource-change-aem-6_3/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/resource-change-aem-6_3/</guid>
+      <description>API &amp;lsquo;BREAKING&amp;rsquo; changes I&amp;rsquo;d like to share some interesting thing I have faced when we migrated form AEM 6.2 to 6.3.
+There is several options how to observe changes in AEM:
+ EventListener - low lvl EventHandler - high lvl ResourceChangeListener - high lvl  I have used ResourceChangeListener because it was quite easy to get changed/added/removed properties from ResourceChange,BUT in AEM 6.2 they were
+/** * Optional information about changed properties.</description>
+    </item>
+    
+  </channel>
+</rss>

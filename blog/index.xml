@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Andrei Shilov</title>
+    <link>https://andreishilov.dev/blog/</link>
+    <description>Recent content in Blogs on Andrei Shilov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 26 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://andreishilov.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Show Hide Tabs</title>
+      <link>https://andreishilov.dev/blog/tabs-show-hide/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/tabs-show-hide/</guid>
+      <description> Sometimes you want to show and hide whole tabs based on the select value.
+Demo  Dialog Example  JS Code  </description>
+    </item>
+    
+    <item>
+      <title>Custom Editable Toolbar Action</title>
+      <link>https://andreishilov.dev/blog/custom-editable-toolbar-action/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/custom-editable-toolbar-action/</guid>
+      <description>Purpose Sometimes you want to add additional authoring functionality for your components, therefore you might need to add additional toolbar action.
+Example use case For example we have the Hello World component from the aem archetype and we want to check, who was the last one, who edited this component.
+Our initial toolbar.
+Let&amp;rsquo;s add a new toolbar and register it.
+ Update toolbar.
+Now we just need to check that execute method works as expected.</description>
+    </item>
+    
+    <item>
+      <title>How to interact with components in the TouchUI edit mode</title>
+      <link>https://andreishilov.dev/blog/interaction-with-components-in-touchui-edit-mode/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/interaction-with-components-in-touchui-edit-mode/</guid>
+      <description>Problem Mostly we do not have only simple components, we have quite a lot of components with interactions (accordion, tabs, slider etc.). Sometimes it is really hard to content managers to configure such components because it is not possible to interact with components in the TouchUI edit mode because of the OOTB overlay.
+Can we solve this issue? Yes we can, for example there is a cool Toolbar action for the Tabs component from the Core Components.</description>
+    </item>
+    
+    <item>
+      <title>AEM Page Packager</title>
+      <link>https://andreishilov.dev/blog/aem-page-packager/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/aem-page-packager/</guid>
+      <description>Problem In general Have your ever faced the problem that a component works on your local instance but does not work on your qa or your colleague&amp;rsquo;s instance? I am 100% sure that you have faced this. In this case you will ask your colleague to create a package with this page, so you can install it and test locally. But in case the component has configuration options to set up references to another content, for example image component, therefore you will need to beg you colleague to add those paths to the package filter as well (booooooooring manual work).</description>
+    </item>
+    
+    <item>
+      <title>Touch UI show/hide on select</title>
+      <link>https://andreishilov.dev/blog/show-hide-on-select/</link>
+      <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/show-hide-on-select/</guid>
+      <description>Just a hint in case you can not remember configuration :)
+Configuration for the latest coral components aka &amp;lsquo;granite/ui/components/coral/foundation/form/select&amp;rsquo;
+&amp;lt;select jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; granite:class=&amp;quot;cq-dialog-dropdown-showhide&amp;quot; sling:resourceType=&amp;quot;granite/ui/components/coral/foundation/form/select&amp;quot; name=&amp;quot;./select&amp;quot; fielDescription=&amp;quot;D Select&amp;quot; fieldLabel=&amp;quot;Select&amp;quot;&amp;gt; &amp;lt;granite:data jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; cq-dialog-dropdown-showhide-target=&amp;quot;.list-option-listfrom-showhide-target&amp;quot;/&amp;gt; &amp;lt;items jcr:primaryType=&amp;quot;nt:unstructured&amp;quot;&amp;gt; &amp;lt;value1 jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; text=&amp;quot;Text 1&amp;quot; value=&amp;quot;value1&amp;quot;/&amp;gt; &amp;lt;value2 jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; text=&amp;quot;Text 2&amp;quot; value=&amp;quot;value2&amp;quot; /&amp;gt; &amp;lt;/items&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;filed1 jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; granite:class=&amp;quot;hide list-option-listfrom-showhide-target&amp;quot; sling:resourceType=&amp;quot;granite/ui/components/coral/foundation/container&amp;quot;&amp;gt; &amp;lt;granite:data jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; showhidetargetvalue=&amp;quot;value1&amp;quot;/&amp;gt; &amp;lt;items jcr:primaryType=&amp;quot;nt:unstructured&amp;quot;&amp;gt; &amp;lt;colour jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; sling:resourceType=&amp;quot;granite/ui/components/coral/foundation/form/colorfield&amp;quot; fielDescription=&amp;quot;Field 1&amp;quot; fieldLabel=&amp;quot;D Field 1&amp;quot; name=&amp;quot;./field1&amp;quot;/&amp;gt; &amp;lt;/items&amp;gt; &amp;lt;/filed1&amp;gt; &amp;lt;filed2 jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; granite:class=&amp;quot;hide list-option-listfrom-showhide-target&amp;quot; sling:resourceType=&amp;quot;granite/ui/components/coral/foundation/container&amp;quot;&amp;gt; &amp;lt;granite:data jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; showhidetargetvalue=&amp;quot;value1&amp;quot;/&amp;gt; &amp;lt;items jcr:primaryType=&amp;quot;nt:unstructured&amp;quot;&amp;gt; &amp;lt;colour jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; sling:resourceType=&amp;quot;granite/ui/components/coral/foundation/form/colorfield&amp;quot; fielDescription=&amp;quot;Field 2&amp;quot; fieldLabel=&amp;quot;D Field 2&amp;quot; name=&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>AEM components documentation (an alternative way)</title>
+      <link>https://andreishilov.dev/blog/aem-components-documentation/</link>
+      <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/aem-components-documentation/</guid>
+      <description>Intro One of the core things of any product is proper documentation. Documentation simplifies quite a few things such as the onboarding of a new member, saves your time in case someone wants to understand functionality you have implemented and secures project knowledge if someone leaves your company, etc. When working with Adobe Experience Manager, components&amp;rsquo; documentation is a crucial thing, because it is very important for Content Managers to have complete and up-to-date components&amp;rsquo; documentation.</description>
+    </item>
+    
+    <item>
+      <title>Access Control Tool for Adobe Experience Manager by Netcentric</title>
+      <link>https://andreishilov.dev/blog/access-control-tool/</link>
+      <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/access-control-tool/</guid>
+      <description>I would like to share an awesome blog post about Access Control Tool for AEM/CQ with you. The Tool was developed by Netcentric and open sourced to help other AEM developers.
+Blog post &amp;ndash;&amp;gt; AEM: AC Tool or How To Manage Groups &amp;amp; Users
+Quite a comprehensive guide which covers the following topics: * What is it and why do you need this tool * Setup * Migration * Best practices how to organize project structure to most of the AC tool * Configuration basics</description>
+    </item>
+    
+    <item>
+      <title>AEM 6.4 useful links</title>
+      <link>https://andreishilov.dev/blog/aem6_4-knowledge/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/aem6_4-knowledge/</guid>
+      <description>List of useful links to start with AEM 6.4 Below you can find the list of AEM 6.4 related information. Links are grouped by categories.
+General  Using the System Overview Dashboard in AEM Using oak-run.jar to Manage Indexes in AEM Indexing via the Oak-run Jar Oak Documentation and Best Practices Set up Smart Translation Search with AEM Assets Awesome feature, but it requires a lot of RAM(depends on language)  Using Smart Translation Search with AEM Assets  Translation Enhancements in AEM  Adobe Experience Manager 6.</description>
+    </item>
+    
+    <item>
+      <title>Simplify maintaining of dictionaries  in AEM</title>
+      <link>https://andreishilov.dev/blog/aem-dictionaries-utility/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/aem-dictionaries-utility/</guid>
+      <description>Why do you need this Utility or at least should give it a try? Let&amp;rsquo;s imagine pretty common situation:
+You are developing new functionality and your customer or business analytic provides you with new i18 keys which you should to add to your dictionaries. In case you have couple of languages it is quite easy and fast to update. Nevertheless you might have 14,18, or 20 languages and here it becomes really time consuming.</description>
+    </item>
+    
+    <item>
+      <title>AEM and VueJS integration part 2</title>
+      <link>https://andreishilov.dev/blog/vue-integration-part-2/</link>
+      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/vue-integration-part-2/</guid>
+      <description>Previously &amp;hellip; In the previous blog post I have explained a simple (dummy) way of how we can add Vue to an Adobe Experience based project. Now it is time to add a bit more complexity.
+Step 1 - change CDN to NPM  Let&amp;rsquo;s get rid of our hardcoded inclusion of Vue js from CDN. I have prepared a package.json file that will be needed  { &amp;quot;name&amp;quot;: &amp;quot;aem-ktln&amp;quot;, &amp;quot;version&amp;quot;: &amp;quot;1.</description>
+    </item>
+    
+    <item>
+      <title>AEM and VueJS integration part I</title>
+      <link>https://andreishilov.dev/blog/vue-integration-part-1/</link>
+      <pubDate>Wed, 18 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/vue-integration-part-1/</guid>
+      <description>Why VueJS I guess that we are all bored with jQuery at the beginning of 2018. There are many modern frameworks we want to use and to try (React, Angular). Nevertheless it is quite complicated to integrate them into AEM and here comes VueJS. It is not monolithic and could be used like a small library to add a bit of action to your AEM based site
+Vue intro  Please take a look at the VueJS intro documentation Awesome blog post which describes all ways how he can define Vue component template blog post  Integration working project could be found here</description>
+    </item>
+    
+    <item>
+      <title>Proxing clientlibs in AEM</title>
+      <link>https://andreishilov.dev/blog/proxing-clientlib/</link>
+      <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/proxing-clientlib/</guid>
+      <description>In AEM we know that we should store final clientlib under /etc/designs/site/clientlibs because anyone has access to this node. So you are not worried when you add this clientlib on your page. Nevertheless sometimes we can see that someone has created clientlib under /apps folder and all works correctly on author instance, but when the code is deployed on publish instance nothing works as we expected.
+Since AEM 6.3 you can proxy your clientclibs under /apps folder via special servlet.</description>
+    </item>
+    
+    <item>
+      <title>ResourceChange in 6.3</title>
+      <link>https://andreishilov.dev/blog/resource-change-aem-6_3/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/resource-change-aem-6_3/</guid>
+      <description>API &amp;lsquo;BREAKING&amp;rsquo; changes I&amp;rsquo;d like to share some interesting thing I have faced when we migrated form AEM 6.2 to 6.3.
+There is several options how to observe changes in AEM:
+ EventListener - low lvl EventHandler - high lvl ResourceChangeListener - high lvl  I have used ResourceChangeListener because it was quite easy to get changed/added/removed properties from ResourceChange,BUT in AEM 6.2 they were
+/** * Optional information about changed properties.</description>
+    </item>
+    
+    <item>
+      <title>Sling health check hints</title>
+      <link>https://andreishilov.dev/blog/sling-healthcheck-hint/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/sling-healthcheck-hint/</guid>
+      <description>How improve your health check with info and hint messages May be you are already familiar with AEM operations dashboard if not check this.
+On this dashboard you can find a lot of useful tools but now we are interested in &amp;ldquo;HealthCheck Reports&amp;rdquo;
+    You can overview several of them and notice that some of them has hints and info messages at the top.
+    You can easy find how to create a healthcheck over the internet, but how to add &amp;lsquo;hints&amp;rsquo; or &amp;lsquo;info&amp;rsquo; messages not.</description>
+    </item>
+    
+    <item>
+      <title>Using X-Ray</title>
+      <link>https://andreishilov.dev/blog/using-x-ray/</link>
+      <pubDate>Thu, 27 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/using-x-ray/</guid>
+      <description>The X Ray Tool Pitfalls You can find how to install and use &amp;lsquo;The X Ray Tool&amp;rsquo; here. Below you can find pitfalls you may face and how to deal with them.
+Can not open link in a new window. When you click on a component it is not opened in a new window but you download html. That happened because of Content disposition filter.
+Go to:
+http://localhost:4502/system/console/configMgr  Find Apache Sling Content Disposition Filter</description>
+    </item>
+    
+    <item>
+      <title>Useful tools in AEM development</title>
+      <link>https://andreishilov.dev/blog/tools/</link>
+      <pubDate>Wed, 26 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/tools/</guid>
+      <description>List of tools This list will be replenished as new ones are found
+1 Oak Index Definition Generator Very useful tool to understand what indexes do you need for particular query. link
+2 Dialog Conversion Tool If you are using classic ui dialogs in AEM project and planning to migrate on Touch UI dialogs you definitely need this tool. link
+3 Watch logs in a browser If you bored to watch AEM logs on you file system there is an easy way to see them in a browser.</description>
+    </item>
+    
+    <item>
+      <title>Kotlin in your AEM project</title>
+      <link>https://andreishilov.dev/blog/aem-and-kotlin/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/aem-and-kotlin/</guid>
+      <description>Below is a step-by-step guide on how to add kotlin to a maven based AEM project. (referenced project could be find here)
+Prerequisites  Maven installed on your machine(you can download it here) Your favourite IDE (I prefer Intellij (download here) Community will be enough for us, but you can try ultimate version) Java 8 AEM instance 6.0 +  1. Create a maven project  Go to maven archetype   Choose a version for which one you want to create a project, I will use version 11  mvn org.</description>
+    </item>
+    
+  </channel>
+</rss>

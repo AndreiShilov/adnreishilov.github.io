@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Touchui on Andrei Shilov</title>
+    <link>https://andreishilov.dev/categories/touchui/</link>
+    <description>Recent content in Touchui on Andrei Shilov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 21 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://andreishilov.dev/categories/touchui/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Custom Editable Toolbar Action</title>
+      <link>https://andreishilov.dev/blog/custom-editable-toolbar-action/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/custom-editable-toolbar-action/</guid>
+      <description>Purpose Sometimes you want to add additional authoring functionality for your components, therefore you might need to add additional toolbar action.
+Example use case For example we have the Hello World component from the aem archetype and we want to check, who was the last one, who edited this component.
+Our initial toolbar.
+Let&amp;rsquo;s add a new toolbar and register it.
+ Update toolbar.
+Now we just need to check that execute method works as expected.</description>
+    </item>
+    
+    <item>
+      <title>How to interact with components in the TouchUI edit mode</title>
+      <link>https://andreishilov.dev/blog/interaction-with-components-in-touchui-edit-mode/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/interaction-with-components-in-touchui-edit-mode/</guid>
+      <description>Problem Mostly we do not have only simple components, we have quite a lot of components with interactions (accordion, tabs, slider etc.). Sometimes it is really hard to content managers to configure such components because it is not possible to interact with components in the TouchUI edit mode because of the OOTB overlay.
+Can we solve this issue? Yes we can, for example there is a cool Toolbar action for the Tabs component from the Core Components.</description>
+    </item>
+    
+    <item>
+      <title>Touch UI show/hide on select</title>
+      <link>https://andreishilov.dev/blog/show-hide-on-select/</link>
+      <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/show-hide-on-select/</guid>
+      <description>Just a hint in case you can not remember configuration :)
+Configuration for the latest coral components aka &amp;lsquo;granite/ui/components/coral/foundation/form/select&amp;rsquo;
+&amp;lt;select jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; granite:class=&amp;quot;cq-dialog-dropdown-showhide&amp;quot; sling:resourceType=&amp;quot;granite/ui/components/coral/foundation/form/select&amp;quot; name=&amp;quot;./select&amp;quot; fielDescription=&amp;quot;D Select&amp;quot; fieldLabel=&amp;quot;Select&amp;quot;&amp;gt; &amp;lt;granite:data jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; cq-dialog-dropdown-showhide-target=&amp;quot;.list-option-listfrom-showhide-target&amp;quot;/&amp;gt; &amp;lt;items jcr:primaryType=&amp;quot;nt:unstructured&amp;quot;&amp;gt; &amp;lt;value1 jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; text=&amp;quot;Text 1&amp;quot; value=&amp;quot;value1&amp;quot;/&amp;gt; &amp;lt;value2 jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; text=&amp;quot;Text 2&amp;quot; value=&amp;quot;value2&amp;quot; /&amp;gt; &amp;lt;/items&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;filed1 jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; granite:class=&amp;quot;hide list-option-listfrom-showhide-target&amp;quot; sling:resourceType=&amp;quot;granite/ui/components/coral/foundation/container&amp;quot;&amp;gt; &amp;lt;granite:data jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; showhidetargetvalue=&amp;quot;value1&amp;quot;/&amp;gt; &amp;lt;items jcr:primaryType=&amp;quot;nt:unstructured&amp;quot;&amp;gt; &amp;lt;colour jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; sling:resourceType=&amp;quot;granite/ui/components/coral/foundation/form/colorfield&amp;quot; fielDescription=&amp;quot;Field 1&amp;quot; fieldLabel=&amp;quot;D Field 1&amp;quot; name=&amp;quot;./field1&amp;quot;/&amp;gt; &amp;lt;/items&amp;gt; &amp;lt;/filed1&amp;gt; &amp;lt;filed2 jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; granite:class=&amp;quot;hide list-option-listfrom-showhide-target&amp;quot; sling:resourceType=&amp;quot;granite/ui/components/coral/foundation/container&amp;quot;&amp;gt; &amp;lt;granite:data jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; showhidetargetvalue=&amp;quot;value1&amp;quot;/&amp;gt; &amp;lt;items jcr:primaryType=&amp;quot;nt:unstructured&amp;quot;&amp;gt; &amp;lt;colour jcr:primaryType=&amp;quot;nt:unstructured&amp;quot; sling:resourceType=&amp;quot;granite/ui/components/coral/foundation/form/colorfield&amp;quot; fielDescription=&amp;quot;Field 2&amp;quot; fieldLabel=&amp;quot;D Field 2&amp;quot; name=&amp;quot;.</description>
+    </item>
+    
+  </channel>
+</rss>

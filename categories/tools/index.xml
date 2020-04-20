@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on Andrei Shilov</title>
+    <link>https://andreishilov.dev/categories/tools/</link>
+    <description>Recent content in Tools on Andrei Shilov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 26 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://andreishilov.dev/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AEM Page Packager</title>
+      <link>https://andreishilov.dev/blog/aem-page-packager/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/aem-page-packager/</guid>
+      <description>Problem In general Have your ever faced the problem that a component works on your local instance but does not work on your qa or your colleague&amp;rsquo;s instance? I am 100% sure that you have faced this. In this case you will ask your colleague to create a package with this page, so you can install it and test locally. But in case the component has configuration options to set up references to another content, for example image component, therefore you will need to beg you colleague to add those paths to the package filter as well (booooooooring manual work).</description>
+    </item>
+    
+    <item>
+      <title>AEM components documentation (an alternative way)</title>
+      <link>https://andreishilov.dev/blog/aem-components-documentation/</link>
+      <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/aem-components-documentation/</guid>
+      <description>Intro One of the core things of any product is proper documentation. Documentation simplifies quite a few things such as the onboarding of a new member, saves your time in case someone wants to understand functionality you have implemented and secures project knowledge if someone leaves your company, etc. When working with Adobe Experience Manager, components&amp;rsquo; documentation is a crucial thing, because it is very important for Content Managers to have complete and up-to-date components&amp;rsquo; documentation.</description>
+    </item>
+    
+    <item>
+      <title>Access Control Tool for Adobe Experience Manager by Netcentric</title>
+      <link>https://andreishilov.dev/blog/access-control-tool/</link>
+      <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/access-control-tool/</guid>
+      <description>I would like to share an awesome blog post about Access Control Tool for AEM/CQ with you. The Tool was developed by Netcentric and open sourced to help other AEM developers.
+Blog post &amp;ndash;&amp;gt; AEM: AC Tool or How To Manage Groups &amp;amp; Users
+Quite a comprehensive guide which covers the following topics: * What is it and why do you need this tool * Setup * Migration * Best practices how to organize project structure to most of the AC tool * Configuration basics</description>
+    </item>
+    
+    <item>
+      <title>AEM 6.4 useful links</title>
+      <link>https://andreishilov.dev/blog/aem6_4-knowledge/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/aem6_4-knowledge/</guid>
+      <description>List of useful links to start with AEM 6.4 Below you can find the list of AEM 6.4 related information. Links are grouped by categories.
+General  Using the System Overview Dashboard in AEM Using oak-run.jar to Manage Indexes in AEM Indexing via the Oak-run Jar Oak Documentation and Best Practices Set up Smart Translation Search with AEM Assets Awesome feature, but it requires a lot of RAM(depends on language)  Using Smart Translation Search with AEM Assets  Translation Enhancements in AEM  Adobe Experience Manager 6.</description>
+    </item>
+    
+    <item>
+      <title>Using X-Ray</title>
+      <link>https://andreishilov.dev/blog/using-x-ray/</link>
+      <pubDate>Thu, 27 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/using-x-ray/</guid>
+      <description>The X Ray Tool Pitfalls You can find how to install and use &amp;lsquo;The X Ray Tool&amp;rsquo; here. Below you can find pitfalls you may face and how to deal with them.
+Can not open link in a new window. When you click on a component it is not opened in a new window but you download html. That happened because of Content disposition filter.
+Go to:
+http://localhost:4502/system/console/configMgr  Find Apache Sling Content Disposition Filter</description>
+    </item>
+    
+    <item>
+      <title>Useful tools in AEM development</title>
+      <link>https://andreishilov.dev/blog/tools/</link>
+      <pubDate>Wed, 26 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/tools/</guid>
+      <description>List of tools This list will be replenished as new ones are found
+1 Oak Index Definition Generator Very useful tool to understand what indexes do you need for particular query. link
+2 Dialog Conversion Tool If you are using classic ui dialogs in AEM project and planning to migrate on Touch UI dialogs you definitely need this tool. link
+3 Watch logs in a browser If you bored to watch AEM logs on you file system there is an easy way to see them in a browser.</description>
+    </item>
+    
+  </channel>
+</rss>

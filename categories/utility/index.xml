@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Utility on Andrei Shilov</title>
+    <link>https://andreishilov.dev/categories/utility/</link>
+    <description>Recent content in Utility on Andrei Shilov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 21 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://andreishilov.dev/categories/utility/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simplify maintaining of dictionaries  in AEM</title>
+      <link>https://andreishilov.dev/blog/aem-dictionaries-utility/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/aem-dictionaries-utility/</guid>
+      <description>Why do you need this Utility or at least should give it a try? Let&amp;rsquo;s imagine pretty common situation:
+You are developing new functionality and your customer or business analytic provides you with new i18 keys which you should to add to your dictionaries. In case you have couple of languages it is quite easy and fast to update. Nevertheless you might have 14,18, or 20 languages and here it becomes really time consuming.</description>
+    </item>
+    
+  </channel>
+</rss>

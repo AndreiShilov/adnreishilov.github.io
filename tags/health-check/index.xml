@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Health Check on Andrei Shilov</title>
+    <link>https://andreishilov.dev/tags/health-check/</link>
+    <description>Recent content in Health Check on Andrei Shilov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 29 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://andreishilov.dev/tags/health-check/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sling health check hints</title>
+      <link>https://andreishilov.dev/blog/sling-healthcheck-hint/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/sling-healthcheck-hint/</guid>
+      <description>How improve your health check with info and hint messages May be you are already familiar with AEM operations dashboard if not check this.
+On this dashboard you can find a lot of useful tools but now we are interested in &amp;ldquo;HealthCheck Reports&amp;rdquo;
+    You can overview several of them and notice that some of them has hints and info messages at the top.
+    You can easy find how to create a healthcheck over the internet, but how to add &amp;lsquo;hints&amp;rsquo; or &amp;lsquo;info&amp;rsquo; messages not.</description>
+    </item>
+    
+  </channel>
+</rss>

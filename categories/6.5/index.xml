@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>6.5 on Andrei Shilov</title>
+    <link>https://andreishilov.dev/categories/6.5/</link>
+    <description>Recent content in 6.5 on Andrei Shilov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 21 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://andreishilov.dev/categories/6.5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Custom Editable Toolbar Action</title>
+      <link>https://andreishilov.dev/blog/custom-editable-toolbar-action/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/custom-editable-toolbar-action/</guid>
+      <description>Purpose Sometimes you want to add additional authoring functionality for your components, therefore you might need to add additional toolbar action.
+Example use case For example we have the Hello World component from the aem archetype and we want to check, who was the last one, who edited this component.
+Our initial toolbar.
+Let&amp;rsquo;s add a new toolbar and register it.
+ Update toolbar.
+Now we just need to check that execute method works as expected.</description>
+    </item>
+    
+    <item>
+      <title>How to interact with components in the TouchUI edit mode</title>
+      <link>https://andreishilov.dev/blog/interaction-with-components-in-touchui-edit-mode/</link>
+      <pubDate>Wed, 21 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/interaction-with-components-in-touchui-edit-mode/</guid>
+      <description>Problem Mostly we do not have only simple components, we have quite a lot of components with interactions (accordion, tabs, slider etc.). Sometimes it is really hard to content managers to configure such components because it is not possible to interact with components in the TouchUI edit mode because of the OOTB overlay.
+Can we solve this issue? Yes we can, for example there is a cool Toolbar action for the Tabs component from the Core Components.</description>
+    </item>
+    
+  </channel>
+</rss>

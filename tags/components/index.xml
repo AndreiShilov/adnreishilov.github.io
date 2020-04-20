@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Components on Andrei Shilov</title>
+    <link>https://andreishilov.dev/tags/components/</link>
+    <description>Recent content in Components on Andrei Shilov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 28 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://andreishilov.dev/tags/components/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AEM components documentation (an alternative way)</title>
+      <link>https://andreishilov.dev/blog/aem-components-documentation/</link>
+      <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/aem-components-documentation/</guid>
+      <description>Intro One of the core things of any product is proper documentation. Documentation simplifies quite a few things such as the onboarding of a new member, saves your time in case someone wants to understand functionality you have implemented and secures project knowledge if someone leaves your company, etc. When working with Adobe Experience Manager, components&amp;rsquo; documentation is a crucial thing, because it is very important for Content Managers to have complete and up-to-date components&amp;rsquo; documentation.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kotlin on Andrei Shilov</title>
+    <link>https://andreishilov.dev/tags/kotlin/</link>
+    <description>Recent content in Kotlin on Andrei Shilov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 25 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://andreishilov.dev/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kotlin in your AEM project</title>
+      <link>https://andreishilov.dev/blog/aem-and-kotlin/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://andreishilov.dev/blog/aem-and-kotlin/</guid>
+      <description>Below is a step-by-step guide on how to add kotlin to a maven based AEM project. (referenced project could be find here)
+Prerequisites  Maven installed on your machine(you can download it here) Your favourite IDE (I prefer Intellij (download here) Community will be enough for us, but you can try ultimate version) Java 8 AEM instance 6.0 +  1. Create a maven project  Go to maven archetype   Choose a version for which one you want to create a project, I will use version 11  mvn org.</description>
+    </item>
+    
+  </channel>
+</rss>
